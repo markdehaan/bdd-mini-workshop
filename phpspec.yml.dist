@@ -1,0 +1,7 @@
+formatter.name: pretty
+
+suites:
+    hardenbergphp:
+        namespace: HardenbergPHP
+        psr4_prefix: HardenbergPHP
+        src_path: src

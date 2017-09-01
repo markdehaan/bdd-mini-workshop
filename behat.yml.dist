@@ -1,0 +1,21 @@
+default:
+    formatters:
+        pretty:
+            verbose: true
+            paths: false
+        html:
+            output_path: %paths.base%/public/bdd
+
+    suites:
+        cart:
+            paths: [ %paths.base%/features/cart ]
+            contexts:
+                - CartContext
+
+    extensions:
+        emuse\BehatHTMLFormatter\BehatHTMLFormatterExtension:
+            name: html
+            renderer: Twig
+            file_name: index
+            print_args: true
+            print_outp: true
